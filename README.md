@@ -8,7 +8,12 @@ Welcome to my personal collection of Python projects! This repository showcases 
 
 ### 1. **RPS Fusion: Timeless Challenge**
 
-A stylish and interactive Rock-Paper-Scissors game built with Flask. Features smooth background transitions and a modern UI.
+A stylish and interactive Rock-Paper-Scissors game built with Flask. Features smooth background transitions, session-based score tracking, and a responsive modern UI.
+
+![image](https://github.com/user-attachments/assets/22e5b48d-c428-4eaf-80dc-94de08d96d32)
+
+
+[![🎮 Play RPS Fusion Now](https://img.shields.io/badge/🎮%20Play%20RPS%20Fusion%20Now-blueviolet?style=for-the-badge&logo=flask&logoColor=white)](https://rps-fusion-timeless-challenge.onrender.com)
 
 ### 2. **GUI Rock Paper Scissors**
 
@@ -46,11 +51,11 @@ A command-line script that asks the user if they have a problem and responds acc
 
 ## 🛠️ Technologies Used
 
-* **Python**: The core programming language for all projects.
-* **Flask**: A micro web framework used in the RPS Fusion game.
-* **Tkinter**: Python's standard GUI library for desktop applications.
-* **Turtle Graphics**: For generating spiral art patterns.
-* **SQLite**: Used in the Student Grading System for data storage.
+- **Python**: The core programming language for all projects.
+- **Flask**: A micro web framework used in the RPS Fusion game.
+- **Tkinter**: Python's standard GUI library for desktop applications.
+- **Turtle Graphics**: For generating spiral art patterns.
+- **SQLite**: Used in the Student Grading System for data storage.
 
 ---
 
@@ -63,7 +68,7 @@ To run any of these projects locally:
    ```bash
    git clone https://github.com/pjprogrammers/python.git
    cd python
-   ```
+````
 
 2. **Set up a virtual environment** (optional but recommended):
 
@@ -83,7 +88,8 @@ To run any of these projects locally:
    For example, to run the RPS Fusion game:
 
    ```bash
-   python RPS\ Fusion\ Timeless\ Challenge/app.py
+   cd "rps-fusion-timeless-challenge"
+   python app.py
    ```
 
 ---
@@ -93,42 +99,55 @@ To run any of these projects locally:
 ```bash
 python/
 │
-├── RPS Fusion Timeless Challenge/  # Flask web application
-│   └── app.py
+├── rps-fusion-timeless-challenge/  # Flask web application
+│   ├── app.py
+│   ├── templates/
+│   ├── static/
+│   └── requirements.txt
 │
-├── GUI_Rock_Paper_Scissors.py      # Tkinter desktop application
-├── spiral_art_generator.py         # Turtle graphics script
-├── student_grading_system.py       # Command-line tool
-├── refined_gui_calculator.py       # Tkinter calculator
-├── Messagebox_Do_You_Have_A_Problem.py  # Messagebox script
-├── Save_A_Dog_Loop.py              # Interactive game
-├── bulk-rename.py                  # Batch rename utility
-├── do-you-have-a-problem.py        # Command-line script
-└── requirements.txt                # Project dependencies
+├── GUI_Rock_Paper_Scissors.py
+├── spiral_art_generator.py
+├── student_grading_system.py
+├── refined_gui_calculator.py
+├── Messagebox_Do_You_Have_A_Problem.py
+├── Save_A_Dog_Loop.py
+├── bulk-rename.py
+├── do-you-have-a-problem.py
+└── requirements.txt
 ```
 
 ---
 
 ## 🚀 Deployment
 
-For deploying the **RPS Fusion: Timeless Challenge** game:
+### RPS Fusion: Timeless Challenge Deployment on Render
 
-1. **Heroku**:
+**🔗 Live URL:** [https://rps-fusion-timeless-challenge.onrender.com](https://rps-fusion-timeless-challenge.onrender.com)
 
-   * Create a `Procfile` with the following content:
+**Deployment Settings:**
 
-     ```
-     web: python app.py
-     ```
+* **Start Command:**
 
-   * Push the repository to Heroku.
+  ```bash
+  gunicorn app:app
+  ```
 
-2. **Vercel**:
+* **Build Command:**
 
-   * Configure the project for Python deployment.
-   * Push the repository to Vercel.
+  ```bash
+  pip install -r requirements.txt
+  ```
 
-*Note: Ensure that all necessary dependencies are listed in `requirements.txt`.*
+* **Runtime:** Python 3.11
+
+* **Environment Variables:**
+
+  ```
+  FLASK_ENV=production
+  SECRET_KEY=<your-strong-secret-key>
+  ```
+
+* **Port:** Automatically managed by Render (use `os.environ["PORT"]` in code)
 
 ---
 
@@ -153,3 +172,5 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ---
 
 Feel free to explore each project and contribute as you see fit. Happy coding! 🚀
+
+````
