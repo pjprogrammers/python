@@ -1,0 +1,158 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/static/images/background1.jpg');
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    padding: 5vh 3vw;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* Translucent Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 15, 0.8); /* Dark overlay for readability */
+    z-index: -1;
+}
+
+/* Main Container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+}
+
+/* Heading */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+/* Button Container */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.buttons button {
+    background-color: #333;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    min-width: 120px;
+}
+
+.buttons button:hover {
+    background-color: #00ffff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Result Box */
+.result-box {
+    background-color: rgba(34, 34, 34, 0.95);
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    border: 2px solid #00ffff;
+    color: #ffffff;
+    margin-top: 30px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Text Scaling */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .buttons button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .result-box {
+        font-size: 1em;
+    }
+}
+
+/* GitHub + Source Buttons Section */
+.extra-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Shared button styles */
+.extra-buttons a {
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+/* Follow Button */
+.github-btn {
+    background-color: #24292e;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.github-btn:hover {
+    background-color: #ffffff;
+    color: #24292e;
+    transform: scale(1.05);
+}
+
+/* Source Code Button */
+.source-btn {
+    background-color: #00ffff;
+    color: #000000;
+    border: 2px solid #00ffff;
+}
+
+.source-btn:hover {
+    background-color: transparent;
+    color: #00ffff;
+    transform: scale(1.05);
+}
