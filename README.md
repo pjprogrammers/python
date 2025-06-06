@@ -68,7 +68,6 @@ To run any of these projects locally:
    ```bash
    git clone https://github.com/pjprogrammers/python.git
    cd python
-````
 
 2. **Set up a virtual environment** (optional but recommended):
 
@@ -121,6 +120,10 @@ python/
 ## 🚀 Deployment
 
 ### RPS Fusion: Timeless Challenge Deployment on Render
+
+![image](https://github.com/user-attachments/assets/3df7b31e-9704-4360-865e-5ecdef5f8ba5)
+
+[![🎮 Play RPS Fusion Now](https://img.shields.io/badge/🎮%20Play%20RPS%20Fusion%20Now-blueviolet?style=for-the-badge&logo=flask&logoColor=white)](https://rps-fusion-timeless-challenge.onrender.com)
 
 **🔗 Live URL:** [https://rps-fusion-timeless-challenge.onrender.com](https://rps-fusion-timeless-challenge.onrender.com)
 
